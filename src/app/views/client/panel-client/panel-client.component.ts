@@ -36,40 +36,27 @@ export class PanelClientComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    let lUsers = JSON.parse(localStorage.getItem('users'));
-    if (lUsers == null || lUsers == undefined || lUsers.length <= 0) {
-      this.coobrasturService.onGetUsers().then(async (data: any) => {
-        let dUsers = data.map(async (eData) => {
-          let nUser = new User;
-          nUser.fromObj(eData);
-          if (nUser.id % 2 == 0) nUser.avatar = null;
-          return nUser;
-        })
-        this.dataRows = await Promise.all(dUsers);
-
-        this.dataRowsfilter = this.dataRows;
-        this.loadingIndicator = true;
-        this.onSetDatatable();
+    this.coobrasturService.onGetUsers().then((data: any) => {
+      let dUsers = data.map((eData) => {
+        let nUser = new User();
+        nUser.fromObj(eData);
+        return nUser;
       })
-    } else {
-      this.dataRows = lUsers;
-      setTimeout(() => {
-      this.onSetDatatable();        
-    }, 100);
-    }
-
+      this.dataRows = [...dUsers];
+      this.onSetDatatable();
+    })
   }
 
   onSetDatatable() {
     this.loadingIndicator = false;
-    this.dataRowsfilter = this.dataRows;
+    this.dataRowsfilter = JSON.parse(JSON.stringify(this.dataRows));
     this.loadingIndicator = true;
-    localStorage.setItem('users', JSON.stringify(this.dataRows));
   }
 
   onEditClient(user) {
     if (user != null && user != undefined) {
-      this.selectedUser = user;
+      this.selectedUser = new User;
+      this.selectedUser.fromObj(user);
       this.modalService.open(this.editModal, this.modalOption);
     }
   }

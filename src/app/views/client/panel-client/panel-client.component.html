@@ -7,9 +7,9 @@
     </div>
     <div class="col-12 mt-2">
         <div class="border" *ngIf="loadingIndicator">
-            <ngx-datatable #table class="bootstrap" [rows]="dataRowsfilter" [loadingIndicator]="loadingIndicator"
+            <ngx-datatable #table class="bootstrap" [rows]="dataRowsfilter"
                 [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'"
-                [loadingIndicator]="loadingIndicator" [sorts]="[{prop: 'id', dir: 'asc'}]" [limit]="10">
+             [sorts]="[{prop: 'id', dir: 'asc'}]" [limit]="10">
                 <ngx-datatable-column [maxWidth]="100" [sortable]="false">
                     <ng-template ngx-datatable-cell-template let-row="row">
                         <img class="mx-auto rounded-circle" width="50px" height="50px"
