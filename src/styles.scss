@@ -1,0 +1,44 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+@import "sweetalert2/src/sweetalert2.scss";
+
+@import "~@swimlane/ngx-datatable/index.css";
+@import "~@swimlane/ngx-datatable/themes/bootstrap.css";
+@import "~@swimlane/ngx-datatable/assets/icons.css";
+
+.nav-color {
+    background-color: #08436f;
+}
+
+.text-color {
+    color: #08436f;
+}
+
+.datatable-header {
+    .datatable-header-cell {
+        font-weight: bold;
+        color: #08436f;
+        background-color: #cad7e0c0;
+    }
+}
+
+.ngx-datatable.bootstrap .datatable-footer {
+    color: #08436f;
+    background-color: #cad7e0c0;
+}
+
+.ngx-datatable.bootstrap .datatable-footer .datatable-pager a {
+    color: #08436f;
+}
+.ngx-datatable.bootstrap .datatable-footer .datatable-pager ul li:not(.disabled).active a,
+.ngx-datatable.bootstrap .datatable-footer .datatable-pager ul li:not(.disabled):hover a {
+    background-color: #548fbd;
+    color: #bfe2ff;
+}

@@ -1,0 +1,37 @@
+{
+    "general": {
+        "button": {
+            "save": "Salvar",
+            "cancel": "Cancelar",
+            "yes": "Sim",
+            "no": "Não",
+            "ok": "OK"
+        },
+        "alerts": {
+            "cancel": "Cancelar?",
+            "cancelMsg": "Deseja Cancelar o registro?",
+            "successMsg": "Cadastro realizado com sucesso!"
+        }
+    },
+    "form": {
+        "field": "Campo ",
+        "invalid": " Inválido!"
+    },
+    "login": {
+        "user": "Usuário",
+        "email": "E-mail",
+        "password": "Senha",
+        "signin": "Acessar"
+    },
+    "client": {
+        "title": "Cliente",
+        "clients-panel": "Painel de Clientes",
+        "name": "Nome",
+        "last-name": "Sobrenome",
+        "email": "E-mail",
+        "edit": "Editar Cliente",
+        "new": "Novo Cliente",
+        "newSubTitle": "Informe os campos a seguir para cadastrar um novo cliente",
+        "job": "Profissão"
+    }
+}
